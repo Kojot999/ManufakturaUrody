@@ -1,0 +1,199 @@
+.Footer {
+  --text: #2f2f2f;
+  --muted: #666666;
+  --line: rgba(0, 0, 0, 0.08);
+  --accent: #f0b100;
+  --accent-dark: #d39a00;
+  --surface: #ffffff;
+  --surface-soft: #f3f3ef;
+
+  background: #f6f6f4;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 28px 16px 22px;
+
+  .wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .footerTop {
+    display: grid;
+    gap: 14px;
+
+    @media (min-width: 860px) {
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: stretch;
+    }
+
+    @media (min-width: 1120px) {
+      grid-template-columns: 0.8fr 1.2fr;
+    }
+  }
+
+  .dataBox,
+  .contactBox {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 20px 22px;
+    min-height: 100%;
+  }
+
+  h3 {
+    margin: 0 0 12px;
+    color: var(--text);
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 48px;
+      height: 2px;
+      background: var(--accent);
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dataBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    ul {
+      display: grid;
+      gap: 4px;
+    }
+
+    ul li {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+
+  .contactBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footerPhone {
+    display: grid;
+    gap: 8px;
+  }
+
+  .footerPhone li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  .iconWrap {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: var(--surface-soft);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .iconWrap img {
+    width: 17px;
+    height: 17px;
+    opacity: 0.82;
+  }
+
+  .footerPhone a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600;
+    transition: color 0.2s ease;
+
+    span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    &:hover {
+      color: var(--accent-dark);
+    }
+  }
+
+  .mailLink {
+    display: inline-block;
+    margin-top: 12px;
+    width: fit-content;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 3px;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-dark);
+      border-color: var(--accent-dark);
+    }
+  }
+
+  @media (min-width: 860px) {
+    .contactBox {
+      .footerPhone {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 18px;
+      }
+
+      .footerPhone li {
+        min-height: 64px;
+        border-bottom: 0;
+      }
+
+      .mailLink {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 719px) {
+    padding: 24px 12px 18px;
+
+    .dataBox,
+    .contactBox {
+      padding: 18px;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .dataBox ul li,
+    .footerPhone a,
+    .mailLink {
+      font-size: 14px;
+    }
+  }
+}
