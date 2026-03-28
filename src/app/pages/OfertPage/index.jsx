@@ -64,7 +64,7 @@ export default function OfertPage() {
           </article>
 
           <article className="scopeCard">
-            <h3>Posągi i elementy małej architektury</h3>
+            <h3>Małej architektury</h3>
             <p>
               Wykonujemy elementy małej architektury z granitu, takie jak
               posągi, rzeźby, ławki, fontanny i detale architektoniczne.
