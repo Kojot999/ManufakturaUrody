@@ -39,7 +39,7 @@ export const NavBar = () => {
     <header className="NavBar">
       <div className="navInner">
         <NavLink to="/" className="brand" onClick={close}>
-          <img src={logo} alt="BastGry s" className="brandMain" />
+          <img src={logo} alt="Manufaktura Urody" className="brandMain" />
         </NavLink>
 
         <button
@@ -58,18 +58,14 @@ export const NavBar = () => {
           <NavLink to="/" end onClick={close} className={linkClass}>
             Start
           </NavLink>
-          <NavLink to="/oferta" onClick={close} className={linkClass}>
-            Oferta
+          <NavLink to="/zabiegi" onClick={close} className={linkClass}>
+            Zabiegi
           </NavLink>
-          <NavLink to="/realizacje" onClick={close} className={linkClass}>
-            Realizacje
+          <NavLink to="/galeria" onClick={close} className={linkClass}>
+            Galeria
           </NavLink>
-          {/* <NavLink to="/referencje" onClick={close} className={linkClass}>
-            Referencje
-          </NavLink> */}
-
-          <NavLink to="/kontakt" onClick={close} className="cta">
-            Kontakt i lokalizacja
+          <NavLink to="/kontakt" onClick={close} className={linkClass}>
+            Kontakt
           </NavLink>
         </nav>
       </div>
